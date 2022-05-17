@@ -1,0 +1,30 @@
+@import './_colors';
+
+.section{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  background-color: $dark;
+  min-height: 600px;
+  height: fit-content;
+  padding: 40px;
+  gap: 40px;
+  color: #fff;
+
+
+  h2 {
+    font-size: 35px;
+
+  }
+
+  .proyects__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+    gap: 30px;
+    width: 100%;
+    height: fit-content;
+    .proyect__card {
+      background-color: black;
+    }
+  }
+}
