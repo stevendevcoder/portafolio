@@ -1,4 +1,5 @@
 @import './_colors';
+@import './_mixins';
 
 .home {
   height: 100vh;
@@ -34,7 +35,6 @@
       font-size: 30px;
     }
     .contactar {
-      cursor: pointer;
       width: 100px;
 
       padding: 15px 25px;
@@ -45,6 +45,15 @@
       margin-top: 20px;
       font-size: 22px;
       margin: 0 auto;
+      cursor: pointer;
+      border-radius: 15px;
+      border: 2.5px solid $dark;
+      color: white;
+      &:hover {
+        background-color: white;
+        color: $dark;
+        transition: background-color .5s;
+      }
     }
   }
   .profile {
@@ -53,7 +62,7 @@
     row-gap: 30px;
 
     .personal-img {
-      background-image: url('../assets/foto.png');
+      background-image: url('../icons/foto.png');
       background-position: center center;
       background-repeat: no-repeat;
       background-size: contain;
@@ -67,36 +76,15 @@
       gap: 25px;
       justify-content: center;
       align-items: center;
-      a {
-        text-decoration: none;
-        padding: 5px;
-        border: 2.5px solid $dark;
-        border-radius: 15px;
-        color: white;
-        background-color: $dark;
-        .social-icons {
-          font-size: 45px;
-        }
-        transition: background-color .4s;
-        &:hover {
-          background-color: #fff;
-          border-color: #fff;
-          .github { color: $dark }
-          .linkedin { color: #2962ff }
-          .whatsapp { color: #26c963 }
-          .email { color: #e63329 }
-          transition: background-color .3s;
-        }
-      }
+      
     }
   }
   .scroll-dowm {
     display: none;
   }
-}
-@media (max-width: 850px) {
-  .home {
+  @media (max-width: 900px){
     margin-top: 50px;
+    margin-bottom: 50px;
     height: fit-content;
     padding-top: 50px;
     justify-content: center;
@@ -104,11 +92,6 @@
       width: 320px;
       height: 320px;
     }
-  }
-}
-
-@media (min-width: 900px) {
-  .home {
     .scroll-dowm {
       display: block;
       position: absolute;

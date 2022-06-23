@@ -1,6 +1,7 @@
 import Header from './components/Header';
 import Home from './components/Home';
 import Proyects from './components/Proyects'
+import Skills from './components/Skills';
 import {
   BrowserRouter as Router,
 } from "react-router-dom";
@@ -15,6 +16,7 @@ function App() {
         <Header></Header>
         <Home></Home>
         <Proyects></Proyects>
+        <Skills/>
       </Router>
     </div>
   );
