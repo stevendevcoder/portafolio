@@ -1,0 +1,24 @@
+@import './_colors';
+.social-link {
+  cursor: pointer;
+  text-decoration: none;
+  padding: 5px;
+  border: 2.5px solid $dark;
+  border-radius: 15px;
+  color: white;
+  background-color: $dark;
+  .social-icons {
+    font-size: 45px;
+  }
+  transition: background-color .4s;
+  &:hover {
+    background-color: #fff;
+    border-color: #fff;
+    .github { color: $dark }
+    .linkedin { color: #2962ff }
+    .whatsapp { color: #26c963 }
+    .email { color: #e63329 }
+    .website { color: $dark }
+    transition: background-color .3s;
+  }
+}
