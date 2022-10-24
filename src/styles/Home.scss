@@ -20,6 +20,48 @@
     color: white;
     border-radius: 20px;
 
+    .btns {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      a {
+        padding: 10px 20px;
+        @media (min-width: 600px){
+          padding: 15px 30px;
+          font-size: 20px;
+        }
+        font-weight: 600;
+        background-color: $dark-red;
+        color: white;
+        margin-top: 20px;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 12px;
+        border: 2.5px solid $dark;
+        color: white;
+        transition: background-color .5s;
+      }
+      .contactar {
+        &:hover {
+          background-color: white;
+          color: $dark;
+          transition: background-color .5s;
+        }
+      }
+      .descargarCV {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: transparent;
+        border-color: #fff;
+        &:hover {
+          background-color: #fff;
+          color: $dark;
+          transition: background-color .5s;
+        }
+      }
+    }
+
     .typical {
       max-width: 100%;
       font-size: 35px;
@@ -30,29 +72,17 @@
     h1 {
       font-size: 40px;
       color: #fff;
+      font-weight: 300;
     }
     h2 {
-      font-size: 30px;
+      font-size: 35px;
     }
-    .contactar {
-      width: 100px;
-
-      padding: 15px 25px;
-      text-align: center;
-      font-weight: bolder;
-      background-color: $red;
-      color: white;
-      margin-top: 20px;
-      font-size: 22px;
-      margin: 0 auto;
-      cursor: pointer;
-      border-radius: 15px;
-      border: 2.5px solid $dark;
-      color: white;
-      &:hover {
-        background-color: white;
-        color: $dark;
-        transition: background-color .5s;
+    @keyframes palpitar {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1.05);
       }
     }
   }
@@ -62,12 +92,12 @@
     row-gap: 30px;
 
     .personal-img {
-      background-image: url('../icons/foto.png');
+      background-image: url('../images/WhatsApp\ Image\ 2022-10-19\ at\ 9.08.29\ PM.jpeg');
       background-position: center center;
       background-repeat: no-repeat;
-      background-size: contain;
-      width: 350px;
-      height: 350px;
+      background-size: cover;
+      width: 300px;
+      height: 300px;
       border-radius: 50%;
       margin: 0 auto;
     }
@@ -79,7 +109,7 @@
       
     }
   }
-  .scroll-dowm {
+  .scroll-down {
     display: none;
   }
   @media (max-width: 900px){
@@ -91,29 +121,6 @@
     .personal-img {
       width: 320px;
       height: 320px;
-    }
-    .scroll-dowm {
-      display: block;
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translate(-50%, 0);
-      min-width: 120px;
-      display: flex;
-      gap: 5px;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      background-color: $dark;
-      padding: 10px;
-      color: #fff;
-      font-size: 20px;
-      border-radius: 20px;
-      font-weight: bolder;
-      cursor: pointer;
-      .icon {
-        font-size: 25px;
-      }
     }
   }
 }

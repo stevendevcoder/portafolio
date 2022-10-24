@@ -15,9 +15,15 @@ export const GitHub = ({url}) => (
   </a>
 )
 
-export const Whatsapp = ({url}) => (
-  <a href={url} target="_blank" alt="whatsapp" className='social-link'>
+export const Whatsapp = ({url, text = ''}) => (
+  <a 
+    href={url} 
+    target="_blank" 
+    alt="whatsapp" 
+    className={text !== '' ? 'social-link text' : 'social-link'}
+  >
     <IoLogoWhatsapp className='social-icons whatsapp'/>
+    {text}
   </a>
 )
 

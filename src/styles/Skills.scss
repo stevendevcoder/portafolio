@@ -5,6 +5,10 @@
   background-color: $dark;
   height: fit-content;
   padding: 40px 60px 60px 40px;
+  padding: 40px 60px 60px 40px;
+  @media (max-width: 700px) {
+    padding: 15px 50px 50px 15px;
+  }
 
   .title {
     font-size: 35px;
@@ -14,73 +18,104 @@
 
   .skills__container {
     display: flex;
-    justify-content: space-around;
-    width: 100%;
+    flex-wrap: wrap;
+    justify-items: center;
+    justify-content: center;
     height: fit-content;  
+    gap: 30px;
+
     .skills__card {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: space-center;
       background-color: #f2f2f2b4;
       color: $dark;
-      //gap: 15px;
-      padding: 30px 45px;
-      width: 250px;
-      height: 280px;
+      gap: 15px;
+      padding: 20px 25px;
+      @media (max-width: 700px) {
+        padding: 20px 25px;
+        gap: 10px;
+      }
       border-radius: 20px;
       text-align: center;
+
       .icon-skills {
         font-size: 40px;
         margin: auto auto;
       }
       h2 {
         font-size: 20px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
       }
     }
   }
 
-  .lenguages__container{
-    z-index: 999;
+  .lenguages__container {
     display: grid;
-    width: 100%;
     height: fit-content;
     justify-content: space-around;
-    grid-template-columns: repeat(2, 1fr);
-    @media(min-width: 750px){
-      grid-template-columns: repeat(3, 1fr);
-    }
-    @media(min-width: 1200px){
-      grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(300px, 500px));
+    @media (min-width: 600px){
+
     }
     gap: 30px;
-    .skill {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      p {
-        font-size: 20px;
-        font-weight: 600;
+    .tec-container {
+      padding: 15px;
+      border-radius: 15px;
+      height: fit-content;
+      border: 1px solid gray;
+      
+      h2 {
+        font-size: 25px;
+        margin-bottom: 20px;
       }
-      .logo-skill {
-        width: 90px;
-        height: 90px;
-        background-position: center center;
-        background-size: contain;
-        background-repeat: no-repeat;
+
+      .tec-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;       
+
+        .skill {
+          width: fit-content;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 10px;
+          p {
+            margin-top: 10px;
+            font-size: 20px;
+            font-weight: 600;
+          }
+          .logo-skill {
+            width: 50px;
+            height: 50px;
+            background-position: center center;
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+          .html {background-image: url('../icons/html.png');}
+          .css {background-image: url('../icons/css.png');}
+          .javascript {background-image: url('../icons/javascript.png');}
+          .react {background-image: url('../icons/react.png');}
+          .sass {background-image: url('../icons/sass.png');}
+          .figma {background-image: url('../icons/figma.png');}
+          .php {background-image: url('../icons/php.png');}
+          .wordpress {background-image: url('../icons/wordpress.png');}
+          .nodejs {background-image: url('../icons/nodejs.png');}
+          .git {background-image: url('../icons/git.png');}
+          .wordpress {background-image: url('../icons/wordpress.png');}
+          .firebase {background-image: url('../icons/firebase.png');}
+          .redux { background-image: url('../icons/redux.png'); }
+          .mongob { background-image: url('../icons/mongod.png'); }
+          .tailwindcss { background-image: url('../icons/tailwindcss.png'); }
+          .docker { background-image: url('../icons/docker.png'); }
+          .laravel { background-image: url('../icons/laravel.png'); }
+          .bootstrap { background-image: url('../icons/bootstrap.png'); }
+          .slack { background-image: url('../icons/slack.png'); }
+          .mysql { background-image: url('../icons/mysql.png'); }
+        }
       }
-      .html {background-image: url('../icons/html.png');}
-      .css {background-image: url('../icons/css.png');}
-      .javascript {background-image: url('../icons/javascript.png');}
-      .react {background-image: url('../icons/react.png');}
-      .sass {background-image: url('../icons/sass.png');}
-      .figma {background-image: url('../icons/figma.png');}
-      .php {background-image: url('../icons/php.png');}
-      .wordpress {background-image: url('../icons/wordpress.png');}
-      .nodejs {background-image: url('../icons/nodejs.png');}
-      .git {background-image: url('../icons/git.png');}
-      .wordpress {background-image: url('../icons/wordpress.png');}
-      .firebase {background-image: url('../icons/firebase.png');}
     }
+        
   }
 }

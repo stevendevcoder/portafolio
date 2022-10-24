@@ -1,10 +1,11 @@
 import React from 'react'
 import '../styles/Skills.scss';
 import { IoIosDesktop } from 'react-icons/io';
+import { frontend, backend, otros } from '../data/';
 
 function Skills() {
   return (
-    <section className='section'>
+    <section id='skills' className='section'>
       <h2 className='title'>Habilidades y Conocimientos</h2>
       <div className="skills__container">
         <div className="skills__card">
@@ -23,115 +24,60 @@ function Skills() {
             Para tu sitio web o aplicación de cualquier tipo.
           </p>
         </div>
-        <div className="skills__card">
-          <IoIosDesktop className='icon-skills'/>
-          <h2>Estrategias Googe Ads y Facebook Ads</h2>
-          <p>
-            Diseños únicos
-            Para tu sitio web o aplicación de cualquier tipo.
-          </p>
-        </div>
       </div>
       <div className="lenguages__container">
-        {
-          tecnologias.map(tec => (
-            <div className="skill" key={tec.logo}>
-              <div 
-                className={'logo-skill ' + tec.nombre.toLowerCase()}
-              >
+        <div className='tec-container'>
+          <h2>Frontend</h2>
+          <div className='tec-card'>
+            {
+              frontend.map(tec => (
+                <div className="skill" key={tec.nombre}>
+                  <div 
+                    className={'logo-skill ' + tec.nombre.toLowerCase()}
+                  >
+                    </div>
+                  <p>{tec.nombre}</p>
                 </div>
-              <p>{tec.nombre}</p>
-            </div>
-          ))
-        }
+              ))
+            }
+          </div>
+        </div>
+        <div className='tec-container'>
+          <h2>Backend</h2>
+          <div className='tec-card'>
+            {
+              backend.map(tec => (
+                <div className="skill" key={tec.nombre}>
+                  <div 
+                    className={'logo-skill ' + tec.nombre.toLowerCase()}
+                  >
+                    </div>
+                  <p>{tec.nombre}</p>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+        <div className='tec-container'>
+          <h2>Otros</h2>
+          <div className='tec-card'>
+            {
+              otros.map(tec => (
+                <div className="skill" key={tec.nombre}>
+                  <div 
+                    className={'logo-skill ' + tec.nombre.toLowerCase()}
+                  >
+                    </div>
+                  <p>{tec.nombre}</p>
+                </div>
+              ))
+            }
+          </div>
+        </div>
       </div>
     </section>
   )
 }
 
-const tecnologias = [
-  {
-    nombre: 'HTML',
-    certificados: {
-      nombre: '',
-      link: ''
-    }
-  },
-  {
-    nombre: 'CSS',
-    certificados: {
-      nombre: '',
-      link: ''
-    }
-  },
-  {
-    nombre: 'JavaScript',
-
-    certificados: {
-      nombre: '',
-      link: ''
-    }
-  },
-  {
-    nombre: 'React',
-
-    certificados: {
-      nombre: '',
-      link: ''
-    }
-  },
-  {
-    nombre: 'SASS',
-
-    certificados: {
-      nombre: '',
-      link: ''
-    }
-  },
-  {
-    nombre: 'Figma',
-
-    certificados: {
-      nombre: '',
-      link: ''
-    }
-  },
-  {
-    nombre: 'PHP',
-
-    certificados: {
-      nombre: '',
-      link: ''
-    }
-  },
-  {
-    nombre: 'Wordpress',
-    certificados : {
-      nombre: '',
-      link: ''
-    }
-  },
-  {
-    nombre: 'NodeJS',
-    certificados : {
-      nombre: '',
-      link: ''
-    }
-  },
-  {
-    nombre: 'Git',
-    certificados : {
-      nombre: '',
-      link: ''
-    }
-  },
-  {
-    nombre: 'Firebase',
-    certificados : {
-      nombre: '',
-      link: ''
-    }
-  },
-];
 
 export default Skills

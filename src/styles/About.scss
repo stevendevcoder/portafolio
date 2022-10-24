@@ -1,0 +1,67 @@
+@import './_colors';
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr minmax(300px, 500px);
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr minmax(200px, 300px);
+  }
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+  }
+  width: 100vw;
+  background-color: $dark;
+  height: fit-content;
+  min-height: 500px;
+  padding: 80px 60px 60px 40px;
+  @media (max-width: 700px) {
+    padding: 65px 80px 50px 15px;
+  }
+  b {
+    color: rgb(243, 119, 119);
+    text-decoration: underline;
+  }
+
+  .about-card {
+    @media (min-width: 1300px) {
+      //margin: auto auto;
+      //@error: 700px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    h1 {
+      margin-bottom: 20px;
+      color: #fff;
+      text-align: center;
+      letter-spacing: 9;
+    }
+    
+    p {
+      font-size: 22px;
+      line-height: 1.5;
+      color: rgb(206, 206, 206);
+      @media (max-width: 700px) {
+        font-size: 20px;
+        line-height: 1.3;
+      }
+    }
+  }
+
+  .animation-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .lottie {
+      @media (max-width: 1000px){
+        width: 300px;
+        height: 300px;
+      }
+      @media (max-width: 700px){
+        width: 250px;
+        height: 250px;
+      }
+    }
+  }
+
+}

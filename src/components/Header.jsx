@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import '../styles/Header.scss';
-import { Link } from 'react-router-dom';
 
 import { HiCode, HiOutlineMenu } from 'react-icons/hi'
 
@@ -11,19 +10,19 @@ function Header() {
   const handleClick = () => setShow(!show);
 
   return (
-    <header>
+    <header id='top'>
       <div className="title">
         <HiCode fontSize="30px"/>
-        <Link to='/'>
+        <a href='/'>
           <h1>stevendevcoder</h1>
-        </Link>
+        </a>
       </div>
 
       {/* Menu */}
       <ul className='menu__desktop'>
         {links.map(link => (
-          <li>
-            <Link to={link.path}>{link.description}</Link>
+          <li key={link.path}>
+            <a href={link.path}>{link.description}</a>
           </li>
         ))}
       </ul>
@@ -31,8 +30,8 @@ function Header() {
       {/* Mobile menu */}
       <ul className={`menu__mobile${!show ? ' hidden' : ''}`}>
         {links.map(link => (
-          <li>
-            <Link onClick={handleClick} to={link.path}>{link.description}</Link>
+          <li key={link.path}>
+            <a onClick={handleClick} href={link.path}>{link.description}</a>
           </li>
         ))}
       </ul>
@@ -41,14 +40,13 @@ function Header() {
     </header>
   )
 }
-
+  
 const links = [
-  {path: '/', description: 'Home'},
-  {path: '/proyects', description: 'Proyectos'},
-  {path: '/skills', description: 'Habilidades'},
-  {path: '/aboutme', description: 'Acercad de mi'},
-  {path: '/contact', description: 'Contactame'},
-  {path: '/prices', description: 'Precios'},
+  {path: '/', description: 'Inicio'},
+  {path: '#acerca', description: 'Quién soy'},
+  {path: '#proyectos', description: 'Proyectos'},
+  {path: '#skills', description: 'Habilidades'},
+  {path: '#contact', description: 'Contactar'}
 ];
 
 export default Header

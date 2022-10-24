@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Typical from 'react-typical'
 import { Link } from 'react-scroll';
 
-import { FiChevronDown } from 'react-icons/fi'
+import { FiChevronDown, FiDownload } from 'react-icons/fi'
 
 import {
   Whatsapp,
@@ -14,46 +14,65 @@ import {
 import '../styles/Home.scss'
 
 function Home() {
+  const [scrolled, setScrolled] = useState(true);
+
+  useEffect(() => {
+    const onScroll = () => {
+      if(window.scrollY > 30){
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    }
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll",onScroll)
+  }, []);
+
   return (
     <div className='home'>
       <div className="description">
-        <h1>Desarrollador frontend</h1>
-        <h2>Hola! Soy <b style={{
+        <h2>Soy <b style={{
           color: '#A6243C'
           }}>
-          Héctor Steven</b>
+          Steven Serna</b>
         </h2>
+        <h1>Desarrollador frontend</h1>
         <Typical 
           loop={Infinity}
           className="typical"
           steps={[
-            "Sitios increibles",
+            "The best sites",
             6000,
             "ReactJS",
             3000,
-            "Firebase 🔥​",
+            "Wordpress 🔥​",
             3000,
             "PHP",
             3000,
             "Backend",
             5000,
-            "Fullstack 👨‍💻​",
+            "Fullstack👨‍💻​",
             3000,
-            "Google Ads 📊​",
+            "Google Ads📊​",
             3000,
-            "Asesorias",
+            "Asesorias 🗣️",
             3000,
-            "Cursos de programación 🗣️​",
-            4000,
-            "Diseño UX y UI",
+            "Diseño UX/UI",
             3000,
-            "Código",
+            "Código Limpio",
             4000
           ]}
         />
-        <Link className='contactar' to='contacto'>
-          Contactar
-        </Link>
+        <div className='btns'>
+
+          <a className='contactar' href='/#skills'>
+            Contactar
+          </a>
+          <a className='descargarCV' href='../data/CV.pdf' download>
+            Descargar CV
+            <FiDownload color='' size={20}/>
+          </a>
+        </div>
       </div>
 
       <div className="profile">
@@ -62,16 +81,18 @@ function Home() {
         </div>
         <div className="links">
           <GitHub url={"https://github.com/stevendevcoder"}/>
-          <LinkedIn url={"/"}/>
-          <Whatsapp url={"/"}/>
+          <LinkedIn url={"https://www.linkedin.com/in/steven-serna-zuluaga-870598236/"}/>
+          <Whatsapp url={"https://api.whatsapp.com/send?phone=573025133452&text=Necesito%20ayuda%20con..."}/>
           <Email url={"/"}/>
         </div>
       </div>
 
-      <Link className='scroll-dowm' to=''>
-        Trabajos
-        <FiChevronDown className='icon'/>
-      </Link>
+      { !scrolled &&
+        <a className='scroll-dowm' href='#proyectos'>
+          Trabajos
+          <FiChevronDown className='icon'/>
+        </a> 
+      }
     </div>
   )
 }
