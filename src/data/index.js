@@ -1,6 +1,7 @@
 export const frontend = [
   {
     nombre: 'HTML',
+    icono: '../../icons/html.png',
     certificados: {
       nombre: '',
       link: ''
@@ -8,6 +9,7 @@ export const frontend = [
   },
   {
     nombre: 'CSS',
+    icono: '../icons/css.png',
     certificados: {
       nombre: '',
       link: ''
@@ -15,7 +17,7 @@ export const frontend = [
   },
   {
     nombre: 'JavaScript',
-
+    icono: '../icons/javascript.png',
     certificados: {
       nombre: '',
       link: ''
@@ -23,37 +25,31 @@ export const frontend = [
   },
   {
     nombre: 'React',
-
+    icono: '../icons/react.png',
     certificados: {
       nombre: '',
       link: ''
     }
   },
   {
-    nombre: 'SASS',
-
-    certificados: {
-      nombre: '',
-      link: ''
-    }
-  },
-  {
-    nombre: 'Figma',
-
-    certificados: {
-      nombre: '',
-      link: ''
-    }
-  },
-  {
-    nombre: 'Wordpress',
+    nombre: 'Angular',
+    icono: '../icons/angular.png',
     certificados : {
       nombre: '',
       link: ''
     }
   },
   {
+    nombre: 'SASS',
+    icono: '../icons/sass.png',
+    certificados: {
+      nombre: '',
+      link: ''
+    }
+  },
+  {
     nombre: 'Bootstrap',
+    icono: '../icons/bootstrap.png',
     certificados : {
       nombre: '',
       link: ''
@@ -61,6 +57,15 @@ export const frontend = [
   },
   {
     nombre: 'TailwindCSS',
+    icono: '../icons/tailwindcss.png',
+    certificados : {
+      nombre: '',
+      link: ''
+    }
+  },
+  {
+    nombre: 'Typescript',
+    icono: '../icons/typescript.png',
     certificados : {
       nombre: '',
       link: ''
@@ -69,9 +74,9 @@ export const frontend = [
 ];
 
 export const backend = [
-  
   {
     nombre: 'PHP',
+    icono: '../icons/php.png',
     certificados: {
       nombre: '',
       link: ''
@@ -80,6 +85,7 @@ export const backend = [
   
   {
     nombre: 'NodeJS',
+    icono: '../icons/nodejs.png',
     certificados : {
       nombre: '',
       link: ''
@@ -88,37 +94,66 @@ export const backend = [
   
   {
     nombre: 'Firebase',
+    icono: '../icons/firebase.png',
     certificados : {
       nombre: '',
       link: ''
     }
   },
   {
-    nombre: 'Mysql',
+    nombre: 'MySQL',
+    icono: '../icons/mysql.png',
+    certificados: {
+      nombre: '',
+      link: ''
+    }
+  },/*
+  {
+    nombre: 'Laravel',
+    icono: '../icons/laravel.png',
+    certificados : {
+      nombre: '',
+      link: ''
+    }
+  },*/
+  {
+    nombre: 'MongoDB',
+    icono: '../icons/mongo.png',
+    certificados : {
+      nombre: '',
+      link: ''
+    }
+  },
+  {
+    nombre: 'Java',
+    icono: '../icons/java.png',
+    certificados : {
+      nombre: '',
+      link: ''
+    }
+  },
+  {
+    nombre: 'Spring Boot',
+    icono: '../icons/spring.png',
     certificados: {
       nombre: '',
       link: ''
     }
   },
   {
-    nombre: 'Laravel',
-    certificados : {
+    nombre: 'Postman',
+    icono: '../icons/postman.png',
+    certificados: {
       nombre: '',
       link: ''
     }
-  },
-  {
-    nombre: 'MongoDB',
-    certificados : {
-      nombre: '',
-      link: ''
-    }
-  },
+  }
 ];
 
 export const otros = [
   {
     nombre: 'Git',
+    icono: '../icons/git.png',
     certificados : {
       nombre: '',
       link: ''
@@ -126,6 +161,31 @@ export const otros = [
   },
   {
     nombre: 'Slack',
+    icono: '../icons/slack.png',
+    certificados : {
+      nombre: '',
+      link: ''
+    }
+  },
+  {
+    nombre: 'Figma',
+    icono: '../icons/figma.png',
+    certificados: {
+      nombre: '',
+      link: ''
+    }
+  },
+  {
+    nombre: 'Wordpress',
+    icono: '../icons/wordpress.png',
+    certificados : {
+      nombre: '',
+      link: ''
+    }
+  },
+  {
+    nombre: 'Notion',
+    icono: '../icons/notion.png',
     certificados : {
       nombre: '',
       link: ''

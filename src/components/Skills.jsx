@@ -1,7 +1,9 @@
 import React from 'react'
 import '../styles/Skills.scss';
 import { IoIosDesktop } from 'react-icons/io';
+import { FaDatabase } from 'react-icons/fa';
 import { frontend, backend, otros } from '../data/';
+import Skill from './Skill';
 
 function Skills() {
   return (
@@ -17,11 +19,10 @@ function Skills() {
           </p>
         </div>
         <div className="skills__card">
-          <IoIosDesktop className='icon-skills'/>
-          <h2>Diseño UX y UI</h2>
+          <FaDatabase className='icon-skills'/>
+          <h2>Backend</h2>
           <p>
-            Diseños únicos
-            Para tu sitio web o aplicación de cualquier tipo.
+          Optimizo y mantengo sistemas backend robustos y escalables, garantizando eficiencia y seguridad
           </p>
         </div>
       </div>
@@ -30,15 +31,7 @@ function Skills() {
           <h2>Frontend</h2>
           <div className='tec-card'>
             {
-              frontend.map(tec => (
-                <div className="skill" key={tec.nombre}>
-                  <div 
-                    className={'logo-skill ' + tec.nombre.toLowerCase()}
-                  >
-                    </div>
-                  <p>{tec.nombre}</p>
-                </div>
-              ))
+              frontend.map(tec => <Skill key={tec.nombre} tec={tec} />)
             }
           </div>
         </div>
@@ -46,15 +39,7 @@ function Skills() {
           <h2>Backend</h2>
           <div className='tec-card'>
             {
-              backend.map(tec => (
-                <div className="skill" key={tec.nombre}>
-                  <div 
-                    className={'logo-skill ' + tec.nombre.toLowerCase()}
-                  >
-                    </div>
-                  <p>{tec.nombre}</p>
-                </div>
-              ))
+              backend.map(tec => <Skill key={tec.nombre} tec={tec} />)
             }
           </div>
         </div>
@@ -62,15 +47,7 @@ function Skills() {
           <h2>Otros</h2>
           <div className='tec-card'>
             {
-              otros.map(tec => (
-                <div className="skill" key={tec.nombre}>
-                  <div 
-                    className={'logo-skill ' + tec.nombre.toLowerCase()}
-                  >
-                    </div>
-                  <p>{tec.nombre}</p>
-                </div>
-              ))
+              otros.map(tec => <Skill key={tec.nombre} tec={tec} />)
             }
           </div>
         </div>

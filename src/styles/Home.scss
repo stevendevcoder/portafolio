@@ -39,13 +39,13 @@
         border-radius: 12px;
         border: 2.5px solid $dark;
         color: white;
-        transition: background-color .5s;
+        transition: all .3s;
       }
       .contactar {
         &:hover {
           background-color: white;
           color: $dark;
-          transition: background-color .5s;
+          transition: all .3s;
         }
       }
       .descargarCV {
@@ -57,7 +57,7 @@
         &:hover {
           background-color: #fff;
           color: $dark;
-          transition: background-color .5s;
+          transition: all .3s;
         }
       }
     }

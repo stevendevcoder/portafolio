@@ -39,6 +39,7 @@ header {
       text-decoration: none;
       font-weight: 500;
       transition: color .4s;
+      font-size: 16px;
       &:hover {
         padding-block: 5px;
         color: $dark-red;

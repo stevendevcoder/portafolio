@@ -82,7 +82,6 @@ function Home() {
         <div className="links">
           <GitHub url={"https://github.com/stevendevcoder"}/>
           <LinkedIn url={"https://www.linkedin.com/in/steven-serna-zuluaga-870598236/"}/>
-          <Whatsapp url={"https://api.whatsapp.com/send?phone=573025133452&text=Necesito%20ayuda%20con..."}/>
           <Email url={"/"}/>
         </div>
       </div>

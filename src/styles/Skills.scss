@@ -18,7 +18,6 @@
 
   .skills__container {
     display: flex;
-    flex-wrap: wrap;
     justify-items: center;
     justify-content: center;
     height: fit-content;  
@@ -32,6 +31,8 @@
       color: $dark;
       gap: 15px;
       padding: 20px 25px;
+      width: 470px;
+
       @media (max-width: 700px) {
         padding: 20px 25px;
         gap: 10px;
@@ -105,14 +106,20 @@
           .git {background-image: url('../icons/git.png');}
           .wordpress {background-image: url('../icons/wordpress.png');}
           .firebase {background-image: url('../icons/firebase.png');}
-          .redux { background-image: url('../icons/redux.png'); }
-          .mongob { background-image: url('../icons/mongod.png'); }
+          .mongodb { background-image: url('../icons/mongo.png'); }
           .tailwindcss { background-image: url('../icons/tailwindcss.png'); }
-          .docker { background-image: url('../icons/docker.png'); }
           .laravel { background-image: url('../icons/laravel.png'); }
           .bootstrap { background-image: url('../icons/bootstrap.png'); }
           .slack { background-image: url('../icons/slack.png'); }
           .mysql { background-image: url('../icons/mysql.png'); }
+          .typescript { background-image:  url('../icons/typescript.png'); }
+          .flutter { background-image:  url('../icons/flutter.png'); }
+          .github { background-image:  url('../icons/github.png'); }
+          .spring { background-image:  url('../icons/spring.png'); }
+          .notion { background-image:  url('../icons/notion.png'); }
+          .angular { background-image:  url('../icons/angular.png'); }
+          .postman { background-image:  url('../icons/postman.png'); }
+          .java { background-image:  url('../icons/java.png'); }
         }
       }
     }
